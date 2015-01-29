@@ -1,0 +1,9 @@
+{
+  "generator-fordlee404": {
+    "appName": "jquery-pin",
+    "authors": "Ford Lee <fordlee404@gmail.com>",
+    "description": "A jQuery plugin for pin any elements on screen, fixed elements.",
+    "license": "MIT",
+    "plugins": []
+  }
+}
