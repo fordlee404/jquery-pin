@@ -4,7 +4,6 @@ do($=jQuery)->
 
   $.fn.pin = (options)->
     options = options || {}
-    $elm = $(@)
-    console.log $elm
+    $elm = @
 
     return @

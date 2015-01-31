@@ -5,8 +5,7 @@
   return $.fn.pin = function(options) {
     var $elm;
     options = options || {};
-    $elm = $(this);
-    console.log($elm);
+    $elm = this;
     return this;
   };
 })(jQuery);
