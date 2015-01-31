@@ -22,7 +22,8 @@ module.exports=(grunt)->
       all:
         options:
           jshintrc: true
-        files: ['jquery-pin.js']
+        files:
+          src: ['jquery-pin.js']
   }
   # Loading Grunt plugins and tasks
   grunt.loadNpmTasks 'grunt-contrib-watch'

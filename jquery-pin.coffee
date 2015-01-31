@@ -1,3 +1,4 @@
+### global jQuery ###
 do($=jQuery)->
   'use strict'
 

@@ -1,3 +1,5 @@
+
+/* global jQuery */
 (function($) {
   'use strict';
   return $.fn.pin = function(options) {
