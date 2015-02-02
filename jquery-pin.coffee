@@ -26,13 +26,26 @@ do($=jQuery)->
       _top = $window.scrollTop()
 
       if (_top is options.top or _top > options.top) and not isPinned
+        ###
         # pin
+        ###
+        # set container width and height
+        _width = $elm.outerWidth()
+        _height = $elm.outerHeight()
+        $container.width _width
+        $container.height _height
+
+        # add class
         $elm.addClass options.pinClass
 
         isPinned = true
         return
       else if (_top is options.top or _top < options.top) and isPinned
+        ###
         # unpin
+        ###
+
+        # remove class
         $elm.removeClass options.pinClass
 
         isPinned = false

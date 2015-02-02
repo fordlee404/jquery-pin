@@ -20,12 +20,24 @@
       return options.top = $elm.offset().top;
     })();
     scroll = function() {
-      var _top;
+      var _height, _top, _width;
       _top = $window.scrollTop();
       if ((_top === options.top || _top > options.top) && !isPinned) {
+
+        /*
+         * pin
+         */
+        _width = $elm.outerWidth();
+        _height = $elm.outerHeight();
+        $container.width(_width);
+        $container.height(_height);
         $elm.addClass(options.pinClass);
         isPinned = true;
       } else if ((_top === options.top || _top < options.top) && isPinned) {
+
+        /*
+         * unpin
+         */
         $elm.removeClass(options.pinClass);
         isPinned = false;
       } else {
