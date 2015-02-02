@@ -1,19 +1,38 @@
 
-/* global jQuery */
+/* global jQuery, window */
 (function($) {
   'use strict';
   return $.fn.pin = function(options) {
-    var $container, $elm;
-    options = options || {};
+    var $container, $elm, $window, isPinned, scroll;
+    options = options || {
+      pinClass: 'jq-pinned'
+    };
     $elm = this;
+    $window = $(window);
     $container = null;
+    isPinned = false;
     (function() {
       var _height, _width;
       _width = $elm.outerWidth();
       _height = $elm.outerHeight();
       $elm.wrap('<div style="display:block;"></div>');
-      return $container = $elm.parent();
+      $container = $elm.parent();
+      return options.top = $elm.offset().top;
     })();
+    scroll = function() {
+      var _top;
+      _top = $window.scrollTop();
+      if ((_top === options.top || _top > options.top) && !isPinned) {
+        $elm.addClass(options.pinClass);
+        isPinned = true;
+      } else if ((_top === options.top || _top < options.top) && isPinned) {
+        $elm.removeClass(options.pinClass);
+        isPinned = false;
+      } else {
+        return false;
+      }
+    };
+    $window.bind('scroll', scroll);
 
     /*
     refreshContainer = ->
