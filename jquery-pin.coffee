@@ -32,8 +32,8 @@ do($=jQuery)->
         # set container width and height
         _width = $elm.outerWidth()
         _height = $elm.outerHeight()
-        $container.width _width
-        $container.height _height
+        $container.css 'max-width',_width
+        $container.css 'height',_height
 
         # add class
         $elm.addClass options.pinClass
@@ -54,19 +54,5 @@ do($=jQuery)->
         return false
 
     $window.bind 'scroll',scroll
-    
-    ###
-    refreshContainer = ->
-      _width = $elm.outerWidth()
-      _height = $elm.outerHeight()
-      $container.css 'width',_width
-      $container.css 'height',_height
-      return
-
-    $window = $(window)
-    $window.resize ->
-      if isPinned
-        refreshContainer()
-    ###
 
     return @

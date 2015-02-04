@@ -29,8 +29,8 @@
          */
         _width = $elm.outerWidth();
         _height = $elm.outerHeight();
-        $container.width(_width);
-        $container.height(_height);
+        $container.css('max-width', _width);
+        $container.css('height', _height);
         $elm.addClass(options.pinClass);
         isPinned = true;
       } else if ((_top === options.top || _top < options.top) && isPinned) {
@@ -45,20 +45,6 @@
       }
     };
     $window.bind('scroll', scroll);
-
-    /*
-    refreshContainer = ->
-      _width = $elm.outerWidth()
-      _height = $elm.outerHeight()
-      $container.css 'width',_width
-      $container.css 'height',_height
-      return
-    
-    $window = $(window)
-    $window.resize ->
-      if isPinned
-        refreshContainer()
-     */
     return this;
   };
 })(jQuery);
