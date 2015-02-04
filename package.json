@@ -1,6 +1,6 @@
 {
   "name": "jquery-pin",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "authors": "Ford Lee <fordlee404@gmail.com>",
   "description": "A jQuery plugin for pin any elements on screen, fixed elements.",
   "license": "MIT",
