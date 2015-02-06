@@ -8,7 +8,7 @@ module.exports=(grunt)->
         tasks: ['coffee:compile']
       javascript:
         files: ['jquery-pin.js']
-        tasks: ['jshint:all']
+        tasks: ['jshint:all','uglify:all']
     clean: ['jquery-pin.js','jquery-pin.min.js']
     coffee:
       compile:
@@ -24,11 +24,20 @@ module.exports=(grunt)->
           jshintrc: true
         files:
           src: ['jquery-pin.js']
+    uglify:
+      all:
+        options:
+          mangle: true
+          banner: '/*\n * jQuery-pin <%= pkg.version %>\n * http://github.com/fordlee404/jquery-pin\n */\n'
+        files: {
+          'jquery-pin.min.js': 'jquery-pin.js'
+        }
   }
   # Loading Grunt plugins and tasks
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-jshint'
+  grunt.loadNpmTasks 'grunt-contrib-uglify'
   # Custom tasks
   grunt.registerTask 'default',['watch']
