@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="renderer" content="webkit" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>jquery-pin test</title>
+<style>
+  #header {
+    height: 40px;
+    background-color: #EC6E73;
+  }
+  .jq-pinned {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+</style>
+</head>
+<body>
+<h1>test1</h1>
+<h1>test2</h1>
+<h1>test3</h1>
+<h1>test4</h1>
+<h1>test5</h1>
+<h1>test6</h1>
+<h1>test7</h1>
+<div class="container">
+  <header id="header">
+    <h1>Hello</h1>
+  </header>
+</div>
+<h1>test8</h1>
+<h1>test9</h1>
+<h1>test10</h1>
+<h1>test11</h1>
+<h1>test12</h1>
+<h1>test13</h1>
+<h1>test14</h1>
+<h1>test15</h1>
+<h1>test16</h1>
+<h1>test17</h1>
+<h1>test18</h1>
+<h1>test19</h1>
+<h1>test20</h1>
+<h1>test21</h1>
+<script type="text/javascript" src="../bower_components/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../jquery-pin.js"></script>
+<script>
+(function(){
+  $('#header').pin();
+})();
+</script>
+</body>
+</html>
