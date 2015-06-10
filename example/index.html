@@ -12,13 +12,29 @@
 <meta name="description" content="" />
 <title>jquery-pin test</title>
 <style>
+  .container {
+    position: relative;
+    height: 200px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
   #header {
     height: 40px;
     background-color: #EC6E73;
   }
+  #header h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
   .jq-pinned {
     position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .jq-pinned--bottom {
+    position: absolute;
+    bottom: 0;
     left: 0;
     width: 100%;
   }
@@ -55,7 +71,9 @@
 <script type="text/javascript" src="../jquery-pin.js"></script>
 <script>
 (function(){
-  $('#header').pin();
+  $('#header').pin({
+    container: $('.container')
+  });
 })();
 </script>
 </body>
