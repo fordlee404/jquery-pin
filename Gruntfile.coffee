@@ -40,4 +40,4 @@ module.exports=(grunt)->
   grunt.loadNpmTasks 'grunt-contrib-jshint'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   # Custom tasks
-  grunt.registerTask 'default',['watch']
+  grunt.registerTask 'default',['clean','coffee','jshint','uglify']
