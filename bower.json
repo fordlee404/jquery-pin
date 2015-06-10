@@ -1,7 +1,28 @@
 {
   "name": "jquery-pin",
-  "version": "0.0.0",
+  "version": "1.1.0",
   "dependencies": {
     "jquery": "1.9.1"
-  }
+  },
+  "main": "jquery-pin.min.js",
+  "homepage": "https://github.com/fordlee404/jquery-pin",
+  "authors": [
+    "Ford Lee <fordlee404@gmail.com>"
+  ],
+  "description": "A jQuery plugin for pin any elements on screen, fixed elements.",
+  "keywords": [
+    "jquery",
+    "plugin",
+    "sticky",
+    "fixed",
+    "elements"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }
